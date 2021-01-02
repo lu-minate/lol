@@ -1,0 +1,27 @@
+direction = ""
+start = False
+while direction.lower != "quit":
+    direction = input(">").lower()
+    if direction == "start":
+        if start:
+            print("The car has already started!")
+        else:
+            start = True
+            print("The car has started.")
+
+    elif direction == "stop":
+        if not start:
+            print("The car has stopped already")
+        else:
+            start = False
+            print("The car has stopped")
+    elif direction == "help":
+        print("""
+start - start the car
+stop - stop the car
+quit - quit the game
+        """)
+    elif direction == "quit":
+        break
+    else:
+        print("I don't understand that!")
